@@ -1,36 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import qrImage from './assets/image-qr-code.png'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function QrCodeCard() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <h1 className="text-3xl font-bold underline">Hello Tailwind!</h1>;
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <section className="min-h-screen w-full bg-[hsl(212,45%,89%)] flex items-center justify-center">
+      <article className="bg-white rounded-xl shadow-lg max-w-xs p-4 text-center">
+        <img 
+          src={qrImage} 
+          alt="QR code to visit Frontend Mentor" 
+          className="rounded-lg mb-6"
+        />
+        <div>
+          <h1 className="font-bold text-[1.35rem] text-gray-900 mb-2">
+            Improve your front-end skills by building projects
+          </h1>
+          <p className="text-gray-600 text-[0.96 rem] leading-relaxed m-2">
+            Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+          </p>
+        </div>
+      </article>
+    </section>
+  );
 }
-
-export default App
