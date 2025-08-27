@@ -3,12 +3,13 @@ import qrImage from './assets/image-qr-code.png'
 
 export default function QrCodeCard() {
   return (
-    <section className="min-h-screen w-full bg-[hsl(212,45%,89%)] flex items-center justify-center">
-      <article className="bg-white rounded-xl shadow-lg max-w-xs p-4 text-center">
+    <section className="min-h-screen w-full bg-[hsl(212,45%,89%)] flex items-center justify-center p-[5vh]
+">
+      <article className="bg-white rounded-xl shadow-lg max-w-xs p-4 text-center min-h-[85vh] flex-col justify-center items-center">
         <img 
           src={qrImage} 
           alt="QR code to visit Frontend Mentor" 
-          className="rounded-lg mb-6"
+          className="rounded-lg mb-6 object-contain h-[70%]"
         />
         <div>
           <h1 className="font-bold text-[1.35rem] text-gray-900 mb-2">
